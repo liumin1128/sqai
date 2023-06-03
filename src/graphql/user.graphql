@@ -1,0 +1,52 @@
+fragment userFields on User {
+  __typename
+  _id
+  nickname
+  username
+  avatarUrl
+  sign
+  birthday
+  sex
+  position
+  company
+  tags
+}
+
+query FindUsers($search: String, $tags: [String], $limit: Int, $skip: Int) {
+  findUsers(search: $search, tags: $tags, limit: $limit, skip: $skip) {
+    ...userFields
+  }
+}
+
+query FindUserInfo {
+  findUserInfo {
+    ...userFields
+  }
+}
+
+query Login($input: LoginUserInput) {
+  login(input: $input) {
+    user {
+      ...userFields
+    }
+    token
+  }
+}
+
+mutation UpdateUserInfo($input: UpdateUserInfoInput) {
+  updateUserInfo(input: $input) {
+    ...userFields
+  }
+}
+
+mutation AdminPushUsersTags($users: [ID], $tags: [String]) {
+  adminPushUsersTags(users: $users, tags: $tags) {
+    success
+  }
+}
+
+mutation AdminPullUsersTags($users: [ID], $tags: [String]) {
+  adminPullUsersTags(users: $users, tags: $tags) {
+    success
+  }
+}
