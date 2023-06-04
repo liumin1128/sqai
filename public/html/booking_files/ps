@@ -1,0 +1,9 @@
+var om_app_pix = new Array();
+om_app_pix[0] = new Image();
+om_app_pix[0].src = "https://cms.analytics.yahoo.com/cms?partner_id=ADARA";
+om_app_pix[1] = new Image();
+om_app_pix[1].src = "https://cm.ctnsnet.com/int/cm?crdp=true&prv=ar&uid=4013311290463";
+om_app_pix[2] = new Image();
+om_app_pix[2].src = "https://idsync.rlcdn.com/367258.gif?partner_uid=4013311290463";
+
+

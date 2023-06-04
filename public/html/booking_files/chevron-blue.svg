@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="4px" height="6px" viewBox="0 0 4 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/chevron</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M2.998995,4.58586 C2.905395,4.58586 2.815995,4.54851 2.750445,4.48191 L0.100395,1.79376 C-0.034905,1.65651 -0.033255,1.43571 0.103845,1.30041 C0.241545,1.16511 0.461745,1.16676 0.597345,1.30401 L2.998995,3.74016 L5.402895,1.30386 C5.538045,1.16646 5.759295,1.16541 5.896095,1.30056 C6.033345,1.43586 6.034845,1.65681 5.899545,1.79391 L3.247245,4.48206 C3.181845,4.54851 3.092145,4.58586 2.998995,4.58586" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="title" transform="translate(-983.000000, -14.000000)">
+            <g id="Group-4" transform="translate(843.000000, 11.000000)">
+                <g id="back">
+                    <g id="icon/chevron-Copy-2" transform="translate(142.000000, 6.000000) scale(-1, 1) rotate(90.000000) translate(-142.000000, -6.000000) translate(139.000000, 3.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Fill-1" fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <g id="color/lightgrey" stroke-width="1" fill-rule="evenodd" mask="url(#mask-2)">
+                            <rect id="Rectangle-3" fill="#DDDDDD" x="0" y="0" width="6" height="6"></rect>
+                            <g id="color/link-blue-Copy-1" fill="#0254EC">
+                                <rect id="Rectangle-3" x="0" y="0" width="6" height="6"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

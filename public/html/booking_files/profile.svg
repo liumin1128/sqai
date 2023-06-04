@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/profile</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,15 C0,11.6858599 2.92277487,9 5.58671466,9 L8.41328534,9 C11.0776069,9 14,11.6858599 14,15 L0,15 Z M7,8 C4.790861,8 3,6.209139 3,4 C3,1.790861 4.790861,0 7,0 C9.209139,0 11,1.790861 11,4 C11,6.209139 9.209139,8 7,8 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="KF-PPS-Panel/default" transform="translate(-20.000000, -19.000000)">
+            <g id="KF_PPS-Panel">
+                <g id="icon/profile" transform="translate(20.000000, 19.000000)">
+                    <g id="color/lightgrey">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#CCCCCC" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        <g id="color/almostblack" mask="url(#mask-2)" fill="#222222">
+                            <rect id="Rectangle-3" x="0" y="0" width="15" height="15"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

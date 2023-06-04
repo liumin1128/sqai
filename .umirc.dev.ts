@@ -4,4 +4,11 @@ export default {
     'process.env.GRAPHQL_URL': 'http://localhost:3101/graphql',
     'process.env.GRAPHQL_URL_WS': 'ws://localhost:3101/graphql',
   },
+  proxy: {
+    '/sq': {
+      target: 'https://www.singaporeair.com',
+      changeOrigin: true,
+      pathRewrite: { '^/sq': '' },
+    },
+  },
 };
