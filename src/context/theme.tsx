@@ -2,11 +2,11 @@ import { ReactNode, useMemo } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useGlobalSettingsContext } from '@/context/globalSettings';
-import darkTheme from '@/configs/theme.dark';
+// import darkTheme from '@/configs/theme.dark';
 import lightTheme from '@/configs/theme.light';
 
 const themeMap = {
-  dark: darkTheme,
+  dark: lightTheme,
   light: lightTheme,
 };
 

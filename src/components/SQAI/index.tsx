@@ -190,7 +190,7 @@ export default () => {
                   inputRef={inputRef}
                   placeholder="Just say something casual, like ‘Where should we go for fun?’"
                   sx={{ flexGrow: 1 }}
-                  defaultValue="帮我制定一份详细的旅行计划"
+                  defaultValue=""
                 />
                 <IconButton
                   sx={{ width: '56px' }}
