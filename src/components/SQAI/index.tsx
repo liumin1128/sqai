@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import ButtonBase from '@mui/material/ButtonBase';
 import IconButton from '@mui/material/IconButton';
 import Input from '@mui/material/OutlinedInput';
 import SendIcon from '@mui/icons-material/Send';
@@ -12,7 +13,7 @@ import Iframe from '@/components/Iframe';
 
 export default () => {
   const [messages, setMessages] = React.useState<Message[]>([]);
-  const [visible, setVisible] = React.useState(true);
+  const [visible, setVisible] = React.useState(false);
   const inputRef = React.useRef<HTMLInputElement>(null);
   const messagesRef = React.useRef<HTMLDivElement>(null);
 
@@ -34,7 +35,7 @@ export default () => {
       pushMessage({
         key: `${Date.now()}`,
         isMe: false,
-        message: '你好，请问有什么可以帮到你？',
+        message: '您好，很高兴见到你，上次新西兰之旅怎么样？',
       });
     }, 1000);
     return () => {
@@ -56,16 +57,8 @@ export default () => {
         pushMessage({
           key: `${Date.now()}`,
           isMe: false,
-          message: '好的，根据您以往的旅行记录，我为您推荐了以下目的地：',
-          options: [
-            { label: '巴厘岛', value: 'bld', image: '/images/bld.jpeg' },
-            { label: '曼谷', value: 'mg', image: '/images/mg.jpeg' },
-            {
-              label: '马尔代夫',
-              value: 'medf',
-              image: '/images/medf.jpeg',
-            },
-          ],
+          message:
+            '好的，根据您以往的旅行偏好，澳大利亚看起来是个不错的选择！需要我给您推荐几个目的地吗？',
         });
       }, 1000);
     }
@@ -80,21 +73,11 @@ export default () => {
         pushMessage({
           key: `${Date.now()}`,
           isMe: false,
-          message: `巴厘岛是印尼的一个岛屿，因为其美丽的海滩和浪漫的度假体验而闻名于世。它是世界上最受欢迎的旅游目的地之一，每年吸引着数百万游客前来参观。
-
-    巴厘岛的气候温暖舒适，全年可游玩。它的自然景观非常多样，包括茂密的热带雨林、火山和美丽的海滩。岛上还有很多有趣的文化和历史遗迹，如独特的巴厘岛神庙和印尼传统舞蹈。
-
-    与其他许多亚洲国家相比，巴厘岛的食品文化非常独特。巴厘岛的美食以其独特的味道和风味为特色，包括烤猪、传统的巴厘岛饭、各种酱汁和当地烤鱼等。
-
-    最重要的是，巴厘岛以其豪华和放松的度假体验而闻名于世。岛上的度假村和旅游胜地提供了各种各样的活动和服务，包括spa、高尔夫球场、水上运动、沙滩漫步和汗蒸房等。无论您是想放松身心还是充满活力地度过假期，巴厘岛都是一个完美的选择。
-
-    为您列举了一些热门景点：`,
+          message: '哇哦，提前祝您生日快乐，以下是我为你悉心挑选的目的地：',
           options: [
-            { label: '蓝梦岛', value: '1', image: '/images/1.jpeg' },
-            { label: '金巴兰海滩', value: '2', image: '/images/2.jpeg' },
-            { label: '库塔海滩', value: '3', image: '/images/3.jpeg' },
-            { label: '情人崖', value: '4', image: '/images/4.jpeg' },
-            { label: '海神庙', value: '5', image: '/images/5.jpeg' },
+            { label: '悉尼', value: 'xn', image: '/images/xn.jpeg' },
+            { label: '墨尔本', value: 'meb', image: '/images/meb.jpeg' },
+            { label: '布里斯班', value: 'blsb', image: '/images/blsb.jpeg' },
           ],
         });
       }, 1000);
@@ -110,10 +93,25 @@ export default () => {
         pushMessage({
           key: `${Date.now()}`,
           isMe: false,
-          message: `根据您以往的行程记录，已经为您和您的家人选择了最优行程，请问是否可以按照这个行程来进行预订？`,
-          images: ['/images/booking1.png'],
+          message: `悉尼是澳大利亚最大的城市和经济中心，位于新南威尔士州东海岸。它是一个多元文化的城市，拥有世界上最著名的景点和观光目的地之一。
+
+悉尼的地标建筑是悉尼歌剧院和悉尼海港大桥。这两个建筑与海港和周围的山脉相得益彰，形成了一个世界著名的风景区。
+
+悉尼市区拥有许多博物馆和艺术中心，包括国立艺术学院、悉尼科技博物馆和新南威尔士州美术馆。此外，悉尼还拥有多个美丽的海滩、公园和花园，如邦迪海滩、曼利公园和皇家植物园等。
+
+悉尼也是一个文化和娱乐中心，在城市中心和周围地区有许多餐厅、酒吧、夜总会和购物中心。每年11月的悉尼奥地利音乐节和12月的新年烟花表演是该市重要的节日活动。
+
+总之，悉尼是一个美丽、多元和活力四射的城市，是一个令人难以忘怀的旅游目的地。
+
+为您列举了一些热门景点：`,
+          options: [
+            { label: '达令港', value: '1', image: '/images/1.jpeg' },
+            { label: '悉尼歌剧院', value: '2', image: '/images/2.jpeg' },
+            { label: '邦迪海滩', value: '3', image: '/images/3.jpeg' },
+            { label: '悉尼皇家植物园', value: '4', image: '/images/4.jpeg' },
+            { label: '悉尼港大桥', value: '5', image: '/images/5.jpeg' },
+          ],
         });
-        iframeRef.current?.open('/html/booking2.html');
       }, 1000);
     }
 
@@ -127,12 +125,92 @@ export default () => {
         pushMessage({
           key: `${Date.now()}`,
           isMe: false,
-          message: `已帮您预订成功！我们会发送邮件到您的邮箱，请注意查收！已为您添加提醒事项。是否需要添加行李额。`,
+          message: `根据您以往的行程记录，已经为您推荐了清晨出发的行程，您看一下是否满意？`,
+          images: ['/images/booking1.png'],
+        });
+        iframeRef.current?.open('/html/booking1.html');
+      }, 1000);
+    }
+
+    if (messages.length === 9) {
+      pushMessage({
+        key: `${Date.now()}`,
+        isMe: true,
+        message: content || '',
+      });
+      setTimeout(() => {
+        pushMessage({
+          key: `${Date.now()}`,
+          isMe: false,
+          message: `正在跳转付款页面，请支付。`,
+        });
+        iframeRef.current?.open('/html/booking2.html');
+      }, 1000);
+    }
+
+    if (messages.length === 11) {
+      pushMessage({
+        key: `${Date.now()}`,
+        isMe: true,
+        message: content || '',
+      });
+      setTimeout(() => {
+        pushMessage({
+          key: `${Date.now()}`,
+          isMe: false,
+          message: `已帮您预订成功！我们会发送邮件到您的邮箱，请注意查收！已为您添加提醒事项。`,
+        });
+        iframeRef.current?.open('/html/Booking3.html');
+      }, 1000);
+    }
+
+    if (messages.length === 13) {
+      pushMessage({
+        key: `${Date.now()}`,
+        isMe: true,
+        message: content || '',
+      });
+      setTimeout(() => {
+        pushMessage({
+          key: `${Date.now()}`,
+          isMe: false,
+          message: `不客气，十月的悉尼气候宜人，您之前回程购买了额外行李额，现在有行李额活动，是否提前购买？`,
         });
       }, 1000);
     }
 
-    if (messages.length >= 9) {
+    if (messages.length === 15) {
+      pushMessage({
+        key: `${Date.now()}`,
+        isMe: true,
+        message: content || '',
+      });
+      setTimeout(() => {
+        pushMessage({
+          key: `${Date.now()}`,
+          isMe: false,
+          message: `十月二日是您的生日，我们也为您在1号的航班上预订了生日惊喜，请查收哟！`,
+        });
+      }, 1000);
+    }
+
+    if (messages.length === 17) {
+      pushMessage({
+        key: `${Date.now()}`,
+        isMe: true,
+        message: content || '',
+      });
+      setTimeout(() => {
+        pushMessage({
+          key: `${Date.now()}`,
+          isMe: false,
+          message: `不客气，为您跳转行程管理页面，您可以继续问我有关悉尼的人文风俗和美食问题。`,
+        });
+        iframeRef.current?.open('/html/Booking4.html');
+      }, 1000);
+    }
+
+    if (messages.length >= 17) {
       pushMessage({
         key: `${Date.now()}`,
         isMe: true,
@@ -160,13 +238,13 @@ export default () => {
           position: 'relative',
         }}
       >
-        <Button
+        <ButtonBase
           onClick={() => {
             setVisible(!visible);
           }}
         >
-          Test
-        </Button>
+          <img style={{ width: 80, height: 80 }} src="/images/rk.png" alt="" />
+        </ButtonBase>
 
         <Card sx={{ zIndex: 9 }}>
           {visible && (
@@ -188,7 +266,7 @@ export default () => {
               >
                 <Input
                   inputRef={inputRef}
-                  placeholder="Just say something casual, like ‘Where should we go for fun?’"
+                  placeholder="Just say something casual"
                   sx={{ flexGrow: 1 }}
                   defaultValue=""
                 />

@@ -33,7 +33,7 @@ export default (props: Message) => {
           }),
         }}
       >
-        {!isMe && <Avatar />}
+        {!isMe && <Avatar src="/images/rk.png" />}
         <Stack spacing={2}>
           <Box
             sx={{
