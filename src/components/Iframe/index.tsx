@@ -24,7 +24,15 @@ export default forwardRef((props, ref) => {
     <iframe
       ref={iframeRef}
       title="iframe"
-      style={{ width: '100vw', height: '100vh' }}
+      style={{
+        width: '100vw',
+        height: '100vh',
+        border: 'none',
+        position: 'fixed',
+        zIndex: 0,
+        left: 0,
+        top: 0,
+      }}
       sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
     />
   );

@@ -45,7 +45,7 @@ const LinkBehavior = forwardRef((props, ref) => {
 
 const theme = createTheme({
   shape: {
-    borderRadius: 10,
+    borderRadius: 0,
   },
 
   components: {
