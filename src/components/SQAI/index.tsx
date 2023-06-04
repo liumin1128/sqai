@@ -234,23 +234,30 @@ export default () => {
 
       <Box
         sx={{
-          mt: 30,
           width: 600,
-          position: 'relative',
+          position: 'fixed',
+          bottom: 0,
+          right: 0,
         }}
       >
-        <ButtonBase
-          onClick={() => {
-            setVisible(!visible);
-          }}
-        >
-          <img style={{ width: 80, height: 80 }} src="/images/rk.png" alt="" />
-        </ButtonBase>
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <ButtonBase
+            onClick={() => {
+              setVisible(!visible);
+            }}
+          >
+            <img
+              style={{ width: 80, height: 80 }}
+              src="/images/rk.png"
+              alt=""
+            />
+          </ButtonBase>
+        </Box>
 
-        <Card sx={{ zIndex: 9 }}>
+        <Card sx={{ zIndex: 9 }} elevation={3}>
           {visible && (
             <Box>
-              <Box ref={messagesRef} sx={{ height: 500, overflowY: 'scroll' }}>
+              <Box ref={messagesRef} sx={{ height: 600, overflowY: 'scroll' }}>
                 {messages.map((message) => {
                   return (
                     <Box key={message.key}>
