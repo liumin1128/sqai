@@ -234,7 +234,7 @@ export default () => {
 
       <Box
         sx={{
-          mt: 40,
+          mt: 30,
           width: 600,
           position: 'relative',
         }}
@@ -250,7 +250,7 @@ export default () => {
         <Card sx={{ zIndex: 9 }}>
           {visible && (
             <Box>
-              <Box ref={messagesRef} sx={{ height: 600, overflowY: 'scroll' }}>
+              <Box ref={messagesRef} sx={{ height: 500, overflowY: 'scroll' }}>
                 {messages.map((message) => {
                   return (
                     <Box key={message.key}>
