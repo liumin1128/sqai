@@ -46,6 +46,7 @@ export default () => {
   const handleSend = async () => {
     const content = inputRef?.current?.value;
     inputRef.current.value = '';
+    inputRef.current?.focus();
 
     if (messages.length === 1) {
       pushMessage({
