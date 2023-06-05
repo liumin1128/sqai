@@ -234,7 +234,7 @@ export default () => {
 
       <Box
         sx={{
-          mt: 30,
+          mt: 20,
           width: 600,
           position: 'relative',
         }}
